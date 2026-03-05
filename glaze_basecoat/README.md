@@ -13,6 +13,8 @@ Latest supported version is [Basecoat v0.3.11](https://github.com/hunvreus/basec
 
 GitHub Pages Demo: <https://daniellionel01.github.io/glaze/glaze_basecoat/>
 
+*This package is part of a larger monorepository with other UI library bindings: <https://github.com/daniellionel01/glaze>*
+
 ## Getting Started
 
 ```sh
