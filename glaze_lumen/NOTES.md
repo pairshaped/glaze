@@ -8,3 +8,4 @@
 - https://www.behance.net/gallery/223259995/Severance-Lumon-Industries-Website
 - https://www.severance.wiki/design_assets
 - https://github.com/DeFi-Vandelay/severance-lumon-ui
+- https://github.com/OldJobobo/omarchy-lumon-theme
