@@ -13,9 +13,6 @@ const cn_accordion_trigger = "
   hover:underline focus-visible:ring-3 **:data-[slot=accordion-trigger-icon]:ml-auto **:data-[slot=accordion-trigger-icon]:size-4
 "
 
-/// https://github.com/shadcn-ui/ui/blob/5b40b9de5ad5e81228efecbff86d5f0728342ec0/apps/v4/registry/styles/style-vega.css#L11
-const cn_accordion_content = "data-open:animate-accordion-down data-closed:animate-accordion-up text-sm"
-
 /// https://github.com/shadcn-ui/ui/blob/5b40b9de5ad5e81228efecbff86d5f0728342ec0/apps/v4/registry/styles/style-vega.css#L15
 const cn_accordion_content_inner = "pt-0 pb-4"
 
@@ -42,7 +39,21 @@ pub fn item(
     [
       attribute.data("slot", "accordion-item"),
       attribute.class(cn_accordion_item_css),
-      attribute.class("group"),
+      attribute.class(
+        "
+          group
+          [&::details-content]:block
+          [&::details-content]:overflow-clip
+          [&::details-content]:opacity-0
+          [&::details-content]:[block-size:0]
+          [&::details-content]:transition-all
+          [&::details-content]:duration-300
+          [&::details-content]:ease-[cubic-bezier(0.87,0,0.13,1)]
+          [&::details-content]:[transition-behavior:allow-discrete]
+          [&[open]::details-content]:opacity-100
+          [&[open]::details-content]:[block-size:calc-size(auto,size)]
+        ",
+      ),
       ..attrs
     ],
     children,
@@ -81,10 +92,7 @@ pub fn content(
   html.div(
     [
       attribute.data("slot", "accordion-content"),
-      attribute.class(cn_accordion_content),
-      attribute.class(
-        "grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-[cubic-bezier(0.87,0,0.13,1)] group-open:grid-rows-[1fr]",
-      ),
+      attribute.class("text-sm"),
       ..attrs
     ],
     [
@@ -92,7 +100,7 @@ pub fn content(
         [
           attribute.class(cn_accordion_content_inner),
           attribute.class(
-            "overflow-hidden [&_a]:underline [&_a]:underline-offset-3 [&_a]:hover:text-foreground [&_p:not(:last-child)]:mb-4",
+            "[&_a]:underline [&_a]:underline-offset-3 [&_a]:hover:text-foreground [&_p:not(:last-child)]:mb-4",
           ),
         ],
         children,
