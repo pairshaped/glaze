@@ -13,3 +13,5 @@
 - cli?
 - project icon?
 - good docs
+
+- combine other packages into better website (no dev generated index.html files)
