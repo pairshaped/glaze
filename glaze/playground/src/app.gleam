@@ -62,7 +62,9 @@ pub fn view(model: Model) -> Element(Msg) {
           ]),
         ]),
         accordion.item([], [
-          accordion.trigger([], [html.text("What is your return policy?")]),
+          accordion.trigger([attribute.aria_disabled(True)], [
+            html.text("What is your return policy?"),
+          ]),
           accordion.content([], [
             html.text(
               "Returns accepted within 30 days. Items must be unused and in original packaging. Refunds processed within 5-7 business days.",

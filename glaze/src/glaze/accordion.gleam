@@ -13,9 +13,6 @@ const cn_accordion_trigger = "
   hover:underline focus-visible:ring-3 **:data-[slot=accordion-trigger-icon]:ml-auto **:data-[slot=accordion-trigger-icon]:size-4
 "
 
-/// https://github.com/shadcn-ui/ui/blob/5b40b9de5ad5e81228efecbff86d5f0728342ec0/apps/v4/registry/styles/style-vega.css#L15
-const cn_accordion_content_inner = "pt-0 pb-4"
-
 /// https://github.com/shadcn-ui/ui/blob/5b40b9de5ad5e81228efecbff86d5f0728342ec0/apps/v4/registry/bases/base/ui/accordion.tsx
 pub fn accordion(
   attrs: List(attribute.Attribute(a)),
@@ -69,7 +66,7 @@ pub fn trigger(
       attribute.data("slot", "accordion-trigger"),
       attribute.class(cn_accordion_trigger),
       attribute.class(
-        "group/accordion-trigger relative flex flex-1 items-start justify-between border border-transparent transition-all outline-none aria-disabled:pointer-events-none aria-disabled:opacity-50",
+        "relative flex flex-1 items-start justify-between border border-transparent transition-all outline-none aria-disabled:pointer-events-none aria-disabled:opacity-50",
       ),
       ..attrs
     ],
@@ -98,7 +95,8 @@ pub fn content(
     [
       html.div(
         [
-          attribute.class(cn_accordion_content_inner),
+          // https://github.com/shadcn-ui/ui/blob/5b40b9de5ad5e81228efecbff86d5f0728342ec0/apps/v4/registry/styles/style-vega.css#L15
+          attribute.class("pt-0 pb-4"),
           attribute.class(
             "[&_a]:underline [&_a]:underline-offset-3 [&_a]:hover:text-foreground [&_p:not(:last-child)]:mb-4",
           ),
