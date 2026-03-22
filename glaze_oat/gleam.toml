@@ -1,5 +1,5 @@
 name = "glaze_oat"
-version = "2.0.0"
+version = "3.0.0"
 description = "🍩 Lustre Bindings to Oat UI Components"
 
 licences = ["Apache-2.0"]
@@ -12,6 +12,7 @@ links = [
 [dependencies]
 gleam_stdlib = ">= 0.44.0 and < 2.0.0"
 lustre = ">= 5.6.0 and < 6.0.0"
+gleam_json = ">= 3.1.0 and < 4.0.0"
 
 [dev-dependencies]
 gleeunit = ">= 1.0.0 and < 2.0.0"
