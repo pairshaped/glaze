@@ -18,9 +18,9 @@ Latest supported version is [Basecoat v0.3.11](https://github.com/hunvreus/basec
 GitHub Pages Demo: <https://daniellionel01.github.io/glaze/glaze_basecoat/>
 
 Example projects:
-- [Lustre SPA](https://github.com/daniellionel01/glaze/blob/basecoat-v3.0.0/examples/lustre_spa/)
-- [Wisp server (w/ CDN imports)](https://github.com/daniellionel01/glaze/blob/basecoat-v3.0.0/examples/wisper_server_cdn/)
-- [Wisp server (w/ Tailwind CLI)](https://github.com/daniellionel01/glaze/blob/basecoat-v3.0.0/examples/wisper_server_tw_cli/)
+- [Lustre SPA](https://github.com/daniellionel01/glaze/blob/basecoat-v3.0.0/glaze_basecoat/examples/lustre_spa/)
+- [Wisp server (w/ CDN imports)](https://github.com/daniellionel01/glaze/blob/basecoat-v3.0.0/glaze_basecoat/examples/wisper_server_cdn/)
+- [Wisp server (w/ Tailwind CLI)](https://github.com/daniellionel01/glaze/blob/basecoat-v3.0.0/glaze_basecoat/examples/wisper_server_tw_cli/)
 
 ## Getting Started
 
@@ -193,9 +193,9 @@ Lucide docs: <https://lucide.dev/guide/packages/lucide>
 This library constructs HTML elements the same way on a client or on a server, so it is compatible in both environments.
 
 Example projects:
-- [Lustre SPA](https://github.com/daniellionel01/glaze/blob/basecoat-v3.0.0/examples/lustre_spa/)
-- [Wisp server (w/ CDN imports)](https://github.com/daniellionel01/glaze/blob/basecoat-v3.0.0/examples/wisper_server_cdn/)
-- [Wisp server (w/ Tailwind CLI)](https://github.com/daniellionel01/glaze/blob/basecoat-v3.0.0/examples/wisper_server_tw_cli/)
+- [Lustre SPA](https://github.com/daniellionel01/glaze/blob/basecoat-v3.0.0/glaze_basecoat/examples/lustre_spa/)
+- [Wisp server (w/ CDN imports)](https://github.com/daniellionel01/glaze/blob/basecoat-v3.0.0/glaze_basecoat/examples/wisper_server_cdn/)
+- [Wisp server (w/ Tailwind CLI)](https://github.com/daniellionel01/glaze/blob/basecoat-v3.0.0/glaze_basecoat/examples/wisper_server_tw_cli/)
 
 ## Development
 
