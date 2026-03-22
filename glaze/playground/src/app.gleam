@@ -45,7 +45,7 @@ pub fn view(model: Model) -> Element(Msg) {
         html.text("Counter: " <> int.to_string(model.counter)),
       ]),
       html.div([attribute.class("space-x-2")], [
-        button.outline([event.on_click(Decrement)], [html.text("Decrement")]),
+        button.outline([event.on_click(Increment)], [html.text("Increment")]),
         button.default([event.on_click(Increment)], [html.text("Increment")]),
         button.ghost([event.on_click(Increment)], [html.text("Increment")]),
         button.secondary([event.on_click(Increment)], [html.text("Increment")]),
