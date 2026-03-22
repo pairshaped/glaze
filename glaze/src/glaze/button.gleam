@@ -3,10 +3,17 @@ import lustre/element
 import lustre/element/html
 
 /// https://github.com/shadcn-ui/ui/blob/5b40b9de5ad5e81228efecbff86d5f0728342ec0/apps/v4/registry/bases/base/ui/button.tsx
-const shadcn_button_css = "group/button inline-flex shrink-0 items-center justify-center whitespace-nowrap transition-all outline-none select-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0"
+const shadcn_button_css = "
+  group/button inline-flex shrink-0 items-center justify-center whitespace-nowrap transition-all outline-none select-none
+  disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0
+"
 
 /// https://github.com/shadcn-ui/ui/blob/5b40b9de5ad5e81228efecbff86d5f0728342ec0/apps/v4/registry/styles/style-vega.css#L145
-const cn_button_css = "focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:aria-invalid:border-destructive/50 rounded-md border border-transparent bg-clip-padding text-sm font-medium focus-visible:ring-3 aria-invalid:ring-3 active:translate-y-px [&_svg:not([class*='size-'])]:size-4"
+const cn_button_css = "
+  focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40
+  aria-invalid:border-destructive dark:aria-invalid:border-destructive/50 rounded-md border bg-clip-padding
+  text-sm font-medium focus-visible:ring-3 aria-invalid:ring-3 active:translate-y-px [&_svg:not([class*='size-'])]:size-4
+"
 
 pub type Variant {
   DefaultVariant
@@ -21,26 +28,32 @@ pub fn variant_css(variant: Variant) {
   case variant {
     // https://github.com/shadcn-ui/ui/blob/5b40b9de5ad5e81228efecbff86d5f0728342ec0/apps/v4/registry/styles/style-vega.css#L149
     DefaultVariant ->
-      "bg-primary text-primary-foreground [a]:hover:bg-primary/80"
+      "border-transparent bg-primary text-primary-foreground [a]:hover:bg-primary/80"
 
     // https://github.com/shadcn-ui/ui/blob/5b40b9de5ad5e81228efecbff86d5f0728342ec0/apps/v4/registry/styles/style-vega.css#L153
     Outline ->
-      "border-border bg-background hover:bg-muted hover:text-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 aria-expanded:bg-muted aria-expanded:text-foreground shadow-xs"
+      "
+        border-border bg-background hover:bg-muted hover:text-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50
+        aria-expanded:bg-muted aria-expanded:text-foreground shadow-xs
+      "
 
     // https://github.com/shadcn-ui/ui/blob/5b40b9de5ad5e81228efecbff86d5f0728342ec0/apps/v4/registry/styles/style-vega.css#L157
     Secondary ->
-      "bg-secondary text-secondary-foreground hover:bg-secondary/80 aria-expanded:bg-secondary aria-expanded:text-secondary-foreground"
+      "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 aria-expanded:bg-secondary aria-expanded:text-secondary-foreground"
 
     // https://github.com/shadcn-ui/ui/blob/5b40b9de5ad5e81228efecbff86d5f0728342ec0/apps/v4/registry/styles/style-vega.css#L161
     Ghost ->
-      "hover:bg-muted hover:text-foreground dark:hover:bg-muted/50 aria-expanded:bg-muted aria-expanded:text-foreground"
+      "border-transparent hover:bg-muted hover:text-foreground dark:hover:bg-muted/50 aria-expanded:bg-muted aria-expanded:text-foreground"
 
     // https://github.com/shadcn-ui/ui/blob/5b40b9de5ad5e81228efecbff86d5f0728342ec0/apps/v4/registry/styles/style-vega.css#L165
     Destructive ->
-      "bg-destructive/10 hover:bg-destructive/20 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/20 text-destructive focus-visible:border-destructive/40 dark:hover:bg-destructive/30"
+      "
+        border-transparent bg-destructive/10 hover:bg-destructive/20 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40
+        dark:bg-destructive/20 text-destructive focus-visible:border-destructive/40 dark:hover:bg-destructive/30
+      "
 
     // https://github.com/shadcn-ui/ui/blob/5b40b9de5ad5e81228efecbff86d5f0728342ec0/apps/v4/registry/styles/style-vega.css#L169
-    Link -> "text-primary underline-offset-4 hover:underline"
+    Link -> "border-transparent text-primary underline-offset-4 hover:underline"
   }
 }
 
@@ -63,7 +76,10 @@ pub fn size_css(size: Size) {
 
     // https://github.com/shadcn-ui/ui/blob/5b40b9de5ad5e81228efecbff86d5f0728342ec0/apps/v4/registry/styles/style-vega.css#L173
     XS ->
-      "h-6 gap-1 rounded-[min(var(--radius-md),8px)] px-2 text-xs in-data-[slot=button-group]:rounded-md has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3"
+      "
+        h-6 gap-1 rounded-[min(var(--radius-md),8px)] px-2 text-xs in-data-[slot=button-group]:rounded-md has-data-[icon=inline-end]:pr-1.5
+        has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3
+      "
 
     // https://github.com/shadcn-ui/ui/blob/5b40b9de5ad5e81228efecbff86d5f0728342ec0/apps/v4/registry/styles/style-vega.css#L177
     SM ->
